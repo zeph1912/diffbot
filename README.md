@@ -1,10 +1,11 @@
 Copyright (c) 2018 Zhihao Yao (z.yao@uci.edu)
+
 *This program is shared under the GNU General Public License WITHOUT ANY WARRANTY. See the GNU General Public License for more details.*
 
 Diffbot generates a git patch with debug messages removed.
 Line number are automatically re-calculated.
 
-##Usage
+## Usage
 Assume you worked on the `master` branch of an open source project, and now you are on `dev` branch.
 You want to publish all your changes as a big commit on top of `master` branch, without the comments and debug prints you have added. 
 
@@ -25,9 +26,9 @@ git push origin release
 
 Note: diffbot works with Python 2
 
-##Code Example
+## Code Example
 
-###C/C++ code
+### C/C++ code
 ```diff
   /* block comment will not be removed
    *
@@ -46,20 +47,20 @@ Note: diffbot works with Python 2
 ```
 diffbot removes comments, either it is a whole line or part of the line.
 
-###`//` in string
+### `//` in string
 ```c
   sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \ 
 ```
 diffbot handles `//` in string correctly.
 
-###Non C/C++ code
+### Non C/C++ code
 ```diff
 - #comments
   echo helloworld
 ```
 diffbot removes `#` and ignores `dnl`.
 
-###Exception
+### Exception
 ```diff
 ERROR: You should not code this way
 +	if (local_addr < 0xf6000000 || local_addr >= 0xf7000000)
