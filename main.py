@@ -1,8 +1,8 @@
 # Copyright (c) 2018 Zhihao Yao (z.yao@uci.edu)
 #
 # This program is mean to be a single-file script to clean up 
-# our projects. It is not written in an 'objective programming' 
-# fashion. If you want it that way, please do it yourself.
+# my own projects. The code is not written in an 'objective 
+# programming' fashion. Pull requests are welcome.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
